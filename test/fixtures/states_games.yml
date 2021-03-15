@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  difficulty: MyString
+  timer: 2021-01-25 14:56:27
+
+two:
+  difficulty: MyString
+  timer: 2021-01-25 14:56:27

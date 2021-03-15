@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Geobee</title>
+    <link rel="stylesheet" href="./pushy-buttons/css/pushy-buttons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="./src/index.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
+    <script src="./us-map-1.0.1/lib/raphael.js"></script>
+    <script src="./us-map-1.0.1/jquery.usmap.js"></script>
+    <script id='game'>
+      $(document).ready(function() {
+        $('#map').usmap({
+        'click' : function(e, state) {
+            convertStateName(state)
+              },
+          });
+      });
+
+    </script>
+  </head>
+  <body>
+
+    <header>
+      <h1>GeograBee!</h1>
+    </header>
+
+    <main class = "login">
+      <h3 id="login"></h3>
+      <h3 id="new-game"></h3>
+    </main>
+
+    <main class = "gametime">
+      <h3 id='timer'>
+        00:00
+      </h3>
+        <div class="map-style" id="map" style="width: 800px; height: 500px;"></div>
+        <br> 
+        <div id="state-form-block"></div>
+        <div id="score-keeper"></div>
+        <div id="map2" style="width: 1000px; height: 800px;"></div>
+        <br>
+        <div id="user-results"></div>
+
+
+        <div class="sidenav">
+          <div id="sidenav-content" class="sidenav-content">
+            <h3 id='games-table-title' hidden=true>Your Latest Games</h3>
+            <table id='results-table'>
+            </table>
+            <br>
+            <h3 id='games-stats-title' hidden=true>Your Game Stats</h3>
+            <table id='totals-table'>
+            </table>
+          </div>
+        </div>
+    </main>
+    
+  </body>
+</html>
